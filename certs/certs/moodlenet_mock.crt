@@ -1,0 +1,106 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4 (0x4)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=AU, ST=Western Australia, L=Perth, O=Moodle Pty Ltd, OU=Moodle LMS, CN=Testing CA/emailAddress=moodle@example.com
+        Validity
+            Not Before: Feb 20 13:23:52 2023 GMT
+            Not After : Feb 20 13:23:52 2024 GMT
+        Subject: C=AU, ST=Western Australia, L=Perth, O=Moodle Pty Ltd, OU=Moodle LMS, CN=moodlenet_mock
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:aa:c4:73:64:bc:af:16:fc:a2:6f:83:fd:ec:39:
+                    9c:20:00:42:ce:d4:1b:9d:12:d9:c7:32:09:c3:ce:
+                    66:4c:b6:46:b5:53:f1:de:0e:d0:f9:58:cf:d6:42:
+                    4b:68:81:a1:8c:60:fd:dc:fe:4b:3e:ec:55:22:94:
+                    05:2b:6a:cd:c9:08:67:50:05:b0:f3:d7:7e:47:a8:
+                    a5:bf:51:8f:16:91:4e:7f:2c:29:ac:eb:64:bb:f2:
+                    14:ef:c8:3b:3b:66:bc:06:e2:4b:a3:87:85:0f:56:
+                    e9:b3:39:bf:17:83:52:43:d9:cf:a1:b8:63:60:29:
+                    8d:3a:02:f1:dd:7f:e9:f4:a9:04:4c:73:98:d6:a9:
+                    4d:06:22:2e:b8:5b:77:68:5b:7d:78:56:48:0a:1e:
+                    e6:50:1a:7d:8f:b0:1b:3f:cb:e4:d6:33:de:2f:e3:
+                    de:4d:c0:b4:f3:73:27:25:53:0c:8d:f6:98:20:6c:
+                    d5:c1:54:9e:fa:f3:8c:b5:2a:8b:7d:de:83:fb:12:
+                    ae:46:3a:03:a4:f2:d6:5a:52:4e:d6:ca:8e:c4:c3:
+                    82:25:28:d6:69:31:c9:96:2d:c1:96:5d:61:9d:db:
+                    bb:24:58:41:1e:9b:bb:5f:1a:13:24:81:cd:2d:7d:
+                    51:0f:d8:bc:a0:85:d8:46:5a:b6:5c:a5:83:ee:83:
+                    b7:f3
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                9D:F7:76:FE:79:4D:FE:29:8C:7E:21:51:5A:41:A7:C4:16:A2:E5:29
+            X509v3 Authority Key Identifier: 
+                keyid:BC:EC:27:CE:84:2D:E9:3E:AB:26:62:A8:56:26:50:C3:AF:44:9D:01
+
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:moodlenet_mock, DNS:moodlenet_mock.docker.internal, DNS:localhost
+    Signature Algorithm: sha256WithRSAEncryption
+         a4:cc:56:19:36:e3:53:05:bc:f1:45:7b:03:e9:fc:31:85:7c:
+         e2:67:43:eb:7f:5f:e8:f1:98:77:14:8f:e6:99:98:0e:d5:3e:
+         6d:0e:e0:c5:7c:6a:ab:e8:91:89:34:cd:46:9e:b1:02:99:8b:
+         52:33:c2:ef:99:38:00:b1:b4:d1:95:17:d7:ba:ba:e4:63:cb:
+         ea:95:a4:8b:82:08:9d:a1:e9:3a:f2:23:42:13:bd:49:88:c3:
+         9c:55:ca:df:b6:53:69:14:14:5d:7b:c0:7e:78:c1:11:a3:36:
+         45:41:f1:6a:c9:95:8c:58:0f:ea:90:66:ea:99:ac:34:f6:d6:
+         21:db:c5:f5:bb:a3:1a:f9:42:d0:8c:42:a7:b9:b9:9e:08:ed:
+         86:4d:71:f8:33:ab:09:d9:d4:44:a5:79:aa:da:1a:e3:65:48:
+         7a:05:3e:53:38:28:f5:1a:62:ea:bf:6d:f2:2f:02:ec:4f:13:
+         a6:5f:89:e9:e0:ca:19:4c:e1:ec:fe:6d:66:a1:ca:bf:3f:9f:
+         41:97:25:24:bb:38:44:55:21:18:1e:d5:b4:98:c2:88:a3:62:
+         a2:af:61:85:88:cc:60:03:ed:a0:d3:88:3a:d3:70:14:42:e5:
+         69:55:31:9e:13:eb:73:d8:7b:23:c1:40:e7:60:2a:28:90:24:
+         05:cd:07:15:b6:30:c4:2a:59:bb:c7:ab:72:4f:0a:19:be:e3:
+         93:1c:2f:08:39:1a:85:54:7a:2c:cc:bd:85:e1:f2:d1:4f:15:
+         f6:87:c1:9c:0a:03:a1:f9:0f:11:40:1a:ad:58:78:91:e5:72:
+         d0:03:05:40:af:4e:29:7e:57:6e:0a:14:6a:ff:a4:81:14:6d:
+         7b:f2:bf:13:4c:6a:18:aa:3d:d5:73:93:84:30:81:8d:52:3d:
+         a0:40:82:02:0c:e1:8e:77:25:d2:ba:d4:5d:aa:85:64:3d:7e:
+         70:9e:8c:6d:0d:af:08:bf:c6:c5:99:b8:77:93:4b:42:dc:4a:
+         f4:5d:9e:5e:04:ad:7d:a9:b4:59:83:3c:b0:6a:3f:a8:04:92:
+         20:4f:82:7e:99:37:e1:45:f9:a6:29:00:ea:df:b3:37:f4:b4:
+         73:8e:66:c7:99:96:23:fb:ed:8e:25:2f:f8:4d:c3:c9:0e:8b:
+         8e:9b:51:07:c3:1f:e2:70:dc:b5:1d:6c:21:57:b9:0f:5f:1b:
+         22:34:29:2f:e5:27:9b:c9:b1:35:51:fe:89:85:66:d3:19:d9:
+         0a:40:23:eb:d1:70:fe:a1:3f:47:73:7f:d2:79:32:ad:43:bd:
+         81:a4:7a:ec:81:41:e9:69:0d:24:90:3e:17:1f:f6:6f:d4:df:
+         be:b5:aa:e6:c9:22:62:05
+-----BEGIN CERTIFICATE-----
+MIIFPjCCAyagAwIBAgIBBDANBgkqhkiG9w0BAQsFADCBnzELMAkGA1UEBhMCQVUx
+GjAYBgNVBAgMEVdlc3Rlcm4gQXVzdHJhbGlhMQ4wDAYDVQQHDAVQZXJ0aDEXMBUG
+A1UECgwOTW9vZGxlIFB0eSBMdGQxEzARBgNVBAsMCk1vb2RsZSBMTVMxEzARBgNV
+BAMMClRlc3RpbmcgQ0ExITAfBgkqhkiG9w0BCQEWEm1vb2RsZUBleGFtcGxlLmNv
+bTAeFw0yMzAyMjAxMzIzNTJaFw0yNDAyMjAxMzIzNTJaMIGAMQswCQYDVQQGEwJB
+VTEaMBgGA1UECAwRV2VzdGVybiBBdXN0cmFsaWExDjAMBgNVBAcMBVBlcnRoMRcw
+FQYDVQQKDA5Nb29kbGUgUHR5IEx0ZDETMBEGA1UECwwKTW9vZGxlIExNUzEXMBUG
+A1UEAwwObW9vZGxlbmV0X21vY2swggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCqxHNkvK8W/KJvg/3sOZwgAELO1BudEtnHMgnDzmZMtka1U/HeDtD5WM/W
+QktogaGMYP3c/ks+7FUilAUras3JCGdQBbDz135HqKW/UY8WkU5/LCms62S78hTv
+yDs7ZrwG4kujh4UPVumzOb8Xg1JD2c+huGNgKY06AvHdf+n0qQRMc5jWqU0GIi64
+W3doW314VkgKHuZQGn2PsBs/y+TWM94v495NwLTzcyclUwyN9pggbNXBVJ7684y1
+Kot93oP7Eq5GOgOk8tZaUk7Wyo7Ew4IlKNZpMcmWLcGWXWGd27skWEEem7tfGhMk
+gc0tfVEP2LyghdhGWrZcpYPug7fzAgMBAAGjgaEwgZ4wHQYDVR0OBBYEFJ33dv55
+Tf4pjH4hUVpBp8QWouUpMB8GA1UdIwQYMBaAFLzsJ86ELek+qyZiqFYmUMOvRJ0B
+MAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMEQGA1UdEQQ9MDuCDm1vb2RsZW5ldF9t
+b2Nrgh5tb29kbGVuZXRfbW9jay5kb2NrZXIuaW50ZXJuYWyCCWxvY2FsaG9zdDAN
+BgkqhkiG9w0BAQsFAAOCAgEApMxWGTbjUwW88UV7A+n8MYV84mdD639f6PGYdxSP
+5pmYDtU+bQ7gxXxqq+iRiTTNRp6xApmLUjPC75k4ALG00ZUX17q65GPL6pWki4II
+naHpOvIjQhO9SYjDnFXK37ZTaRQUXXvAfnjBEaM2RUHxasmVjFgP6pBm6pmsNPbW
+IdvF9bujGvlC0IxCp7m5ngjthk1x+DOrCdnURKV5qtoa42VIegU+Uzgo9Rpi6r9t
+8i8C7E8Tpl+J6eDKGUzh7P5tZqHKvz+fQZclJLs4RFUhGB7VtJjCiKNioq9hhYjM
+YAPtoNOIOtNwFELlaVUxnhPrc9h7I8FA52AqKJAkBc0HFbYwxCpZu8erck8KGb7j
+kxwvCDkahVR6LMy9heHy0U8V9ofBnAoDofkPEUAarVh4keVy0AMFQK9OKX5XbgoU
+av+kgRRte/K/E0xqGKo91XOThDCBjVI9oECCAgzhjncl0rrUXaqFZD1+cJ6MbQ2v
+CL/GxZm4d5NLQtxK9F2eXgStfam0WYM8sGo/qASSIE+Cfpk34UX5pikA6t+zN/S0
+c45mx5mWI/vtjiUv+E3DyQ6LjptRB8Mf4nDctR1sIVe5D18bIjQpL+Unm8mxNVH+
+iYVm0xnZCkAj69Fw/qE/R3N/0nkyrUO9gaR67IFB6WkNJJA+Fx/2b9TfvrWq5ski
+YgU=
+-----END CERTIFICATE-----
