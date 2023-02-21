@@ -1,19 +1,20 @@
 #!/bin/bash
 
-CERTDIR="`pwd`/certs/"
+CERTDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
 
 CACONF="${CERTDIR}/openssl.cnf"
 CAKEY="${CERTDIR}/ca/ca.key"
 CACERT="${CERTDIR}/ca/ca.pem"
 
+mkdir -p "${CERTDIR}/ca"
+mkdir -p "${CERTDIR}/certs"
+
 if [ -f "$CAKEY" ] && [ -f "${CACERT}" ]; then
     echo "Using existing CA private key"
-    echo
 else
     # Generate the private key for the CA:
     echo "Generating the key and certificate for the CA server"
-    mkdir -p "${CERTDIR}/ca"
-    mkdir -p "${CERTDIR}/certs"
 
     # Generate the key and certificate for the CA.
     cat <<EOF | openssl req -config ${CACONF} -nodes -new -x509  -keyout "${CAKEY}" -out "${CACERT}"
@@ -30,29 +31,19 @@ EOF
     touch "${CERTDIR}/ca/index.txt"
     echo '01' > "${CERTDIR}/ca/serial.txt"
     echo
-    echo "You should add this certificate to your root certificate store."
-
-    OS=`uname -s`
-    if [ "${OS}" = "Darwin" ]
-    then
-        echo "You can use the following command:"
-        echo "sudo security add-trusted-cert -d -r trustRoot -k '/Library/Keychains/System.keychain' ${CACERT}"
-        read -p "Do you want me to do that for you now? " yn
-        case $yn in
-            [Yy]* ) sudo security add-trusted-cert -d -r trustRoot -k '/Library/Keychains/System.keychain' "${CACERT}"; break;;
-        esac
-    fi
-
-    if [ "${OS}" = "Linux" ]
-    then
-        echo "You can use the following command:"
-        echo "sudo cp ${CERTDIR}/ca/ca.pem /usr/local/share/ca-certificates/moodlenet_mock-ca.crt && sudo update-ca-certificates"
-        read -p "Do you want me to do that for you now? " yn
-        case $yn in
-            [Yy]* ) sudo cp "${CERTDIR}/ca/ca.pem" /usr/local/share/ca-certificates/moodlnet_mock.crt && sudo update-ca-certificates; break;;
-        esac
-
-    fi
+    echo "============================================================================"
+    echo "====            You **MUST NOT** share your Certificate keys            ===="
+    echo "============================================================================"
+    echo
+    echo "You can add this certificate to your root certificate store."
+    echo
+    echo "MacOS:"
+    echo "======"
+    echo "sudo security add-trusted-cert -d -r trustRoot -k '/Library/Keychains/System.keychain' ${CACERT}"
+    echo
+    echo "Linux"
+    echo "====="
+    echo "sudo cp ${CERTDIR}/ca/ca.pem /usr/local/share/ca-certificates/moodlenet_mock-ca.crt && sudo update-ca-certificates"
 fi
 
 if [ "$#" -lt 1 ]
@@ -71,7 +62,6 @@ HOSTEXT="${CERTDIR}/certs/${DOMAIN}.ext"
 HOSTP12="${CERTDIR}/certs/${DOMAIN}.p12"
 
 # Create a private key for the dev site:
-echo
 echo "Generating a private key for the $DOMAIN dev site"
 echo
 openssl genrsa -out "${HOSTKEY}" 2048
@@ -153,6 +143,7 @@ EOF
 echo
 
 echo "Signing the request"
+echo openssl ca -batch -config "${CACONF}" -policy signing_policy -extensions signing_req -out "${HOSTCRT}" -infiles "${HOSTCSR}"
 openssl ca -batch -config "${CACONF}" -policy signing_policy -extensions signing_req -out "${HOSTCRT}" -infiles "${HOSTCSR}"
 
 echo "Generating pkcs12 Keystore"

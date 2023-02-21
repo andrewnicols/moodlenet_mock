@@ -1,4 +1,6 @@
 ###> symfony/framework-bundle ###
+/certs/ca
+/certs/certs
 /application/.env.local
 /application/.env.local.php
 /application/.env.*.local
