@@ -29,5 +29,5 @@ COPY certs /opt/certs
 RUN composer install -n \
     && rm -rf /root/.composer
 
-CMD ["symfony", "server:start", "--port=80", "--no-tls", "--allow-http", "--p12=/opt/certs/certs/moodlenet_mock.p12"]
+CMD ["symfony", "server:start", "--no-tls", "--p12=/opt/certs/certs/moodlenet_mock.p12"]
 ENTRYPOINT ["/entrypoint.sh"]

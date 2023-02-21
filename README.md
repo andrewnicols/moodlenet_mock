@@ -16,7 +16,7 @@ If you need to, you can import the root certificate into your local machine. We 
 
 ```
 docker run \
-    -p 443:80 \
+    -p 443:443 \
     -v "${HOME}/.config/localca":/opt/certs/ca \
     moodlenet_mock
 ```
@@ -27,7 +27,7 @@ You can specify additional hostnames to the certificate using the `hostnames` en
 
 ```
 docker run \
-    -p 443:80 \
+    -p 443:443 \
     -e hostnames="some other hostnames here" \
     -v "${HOME}/.config/localca":/opt/certs/ca \
     moodlenet_mock
